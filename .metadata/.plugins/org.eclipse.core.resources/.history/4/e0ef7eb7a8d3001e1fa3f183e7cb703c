@@ -1,0 +1,20 @@
+package bank.management.system;
+
+import javax.swing.*;
+
+public class Transactions extends JFrame{
+	
+	//Constructor
+	Transactions(){
+		setSize(900,900);
+		setLocation(300,0);
+		setVisible(true);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

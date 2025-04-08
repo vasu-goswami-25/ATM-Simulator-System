@@ -1,0 +1,71 @@
+package bank.management.system;
+
+import java.awt.Image;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Transactions extends JFrame{
+	
+	//Constructor
+	Transactions(){
+		
+		setLayout(null);
+		
+		//Set ATM Image
+		ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+		Image i2=i1.getImage().getScaledInstance(800,700,Image.SCALE_DEFAULT);
+		ImageIcon i3=new ImageIcon(i2);
+		JLabel image=new JLabel(i3);
+		image.setBounds(0,0,800,700);
+		add(image);
+		
+		//for headline- Select transaction
+		JLabel text=new JLabel("Please select your Transaction");
+		text.setBounds(180,230,600,30);
+		text.setForeground(Color.WHITE);
+		text.setFont(new Font("System",Font.BOLD,16));
+		image.add(text);
+		
+		// 1-button for deposit
+		JButton deposit=new JButton("Deposit");
+		deposit.setBounds(150,325,110,20);
+		image.add(deposit);
+		
+		// 2-button for Cash Withdrawal
+		JButton withdrawl=new JButton("Cash Withdrawl");
+		withdrawl.setBounds(320,325,130,20);
+		image.add(withdrawl);
+		
+		// 3-button for Fast Cash
+		JButton fastcash=new JButton("Deposit");
+		fastcash.setBounds(150,350,110,20);
+		image.add(fastcash);
+		
+		// 4-button for MiniStatement
+		JButton ministatement=new JButton("Mini Statement");
+		ministatement.setBounds(320,350,130,20);
+		image.add(ministatement);
+		
+		// 5-button for Pin Change
+		JButton pinchange=new JButton("Pin Change");
+		pinchange.setBounds(150,355,110,20);
+		image.add(pinchange);
+				
+				
+		
+		
+		setSize(800,700);
+		setLocation(250,0);
+	//	setUndecorated(true);
+		setVisible(true);
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		new Transactions();
+	}
+
+}

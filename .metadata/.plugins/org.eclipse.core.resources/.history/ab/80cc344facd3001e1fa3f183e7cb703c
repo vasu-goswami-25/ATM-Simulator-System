@@ -1,0 +1,39 @@
+package bank.management.system;
+
+import java.awt.Image;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Transactions extends JFrame{
+	
+	//Constructor
+	Transactions(){
+		
+		setLayout(null);
+		
+		//Set ATM Image
+		ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
+		Image i2=i1.getImage().getScaledInstance(800,700,Image.SCALE_DEFAULT);
+		ImageIcon i3=new ImageIcon(i2);
+		JLabel image=new JLabel(i3);
+		image.setBounds(0,0,800,700);
+		add(image);
+		
+		setSize(800,700);
+		setLocation(250,0);
+		setVisible(true);
+		
+		JLabel text=new JLabel("Please select your Transaction");
+		text.setBounds(200,230,600,30);
+		text.setForeground(Color.WHITE);
+		image.add(text);
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		new Transactions();
+	}
+
+}
